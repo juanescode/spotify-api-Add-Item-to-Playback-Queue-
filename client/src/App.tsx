@@ -74,7 +74,7 @@ function App() {
           {isLoading ? (
             <Loader2 className="animate-spin h-4 w-4" />
           ) : (
-            <p>Buscar...</p>
+            <p>Buscar</p>
           )}
         </Button>
       </form>
