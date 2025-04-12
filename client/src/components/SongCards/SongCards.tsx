@@ -81,7 +81,7 @@ export const SongCards: React.FC<SongCardsProps> = ({
                 className="bg-green-600 hover:bg-green-700 text-white"
               >
                 {loadingStates[song.uri]
-                  ? "Agregando."
+                  ? "Agregando..."
                   : "Agregar a la cola🎵"}
               </Button>
             </div>
