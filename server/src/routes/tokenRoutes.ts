@@ -3,7 +3,7 @@ import { getToeken, postSongs } from "../controllers/tokenController";
 
 const router = Router();
 
-router.get("/api", getToeken);
+router.get("/token", getToeken);
 router.post("/token", postSongs);
 
 export default router;

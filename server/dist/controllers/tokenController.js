@@ -20,11 +20,12 @@ const getToeken = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const code = req.query.code;
     const basic = Buffer.from(`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`).toString("base64");
+    //https://accounts.spotify.com/authorize?client_id=<YOUR_CLIENT_ID>&response_type=code&redirect_uri=<YOUR_REDIRECT_URI>&scope=user-modify-playback-state%20user-read-playback-state
     try {
         const response = yield axios_1.default.post("https://accounts.spotify.com/api/token", new URLSearchParams({
             grant_type: "authorization_code",
             code: code,
-            redirect_uri: "https://test-viking.netlify.app/api/callback",
+            redirect_uri: "http://localhost:3001/api/token", //YOUR_REDIRECT_URI
         }), {
             headers: {
                 Authorization: `Basic ${basic}`,
